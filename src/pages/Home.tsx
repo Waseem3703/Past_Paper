@@ -1,6 +1,9 @@
+import Layout from "../components/Home/Layout";
+
 function Home(){
     return(
-        <h1>Home</h1>
+    
+<Layout/>
     )
 }
 

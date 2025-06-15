@@ -1,0 +1,37 @@
+.Box_Layout {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.Right_Box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  margin-top: 50px;
+}
+.Left_Box {
+  display: flex;
+}
+.h2_heading {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.home_img {
+  width: 500px;
+  height: 427px;
+  margin-right: 120px;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  justify-content: center;  
+  text-align: center;
+  margin-bottom: 2rem;      /* optional spacing */
+}
+.Para{
+  color: rgb(95, 99, 104);
+  font-size: 18px;
+  font-weight: 400px;
+}

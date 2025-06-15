@@ -1,13 +1,13 @@
-import styles from "./Layout.module.css";
+import styles from "../CSS/Home_1.module.css";
 import image_1 from "/src/assets/HomePageImage/image-1.webp";
 
-function Layout() {
+function Home_1() {
   return (
     <div>
       <div className={styles.Box_Layout}>
         <div className={styles.Right_Box}>
           <h2 className={styles.h2_heading}>
-            Access COMSATS Past Papers with Ease
+            Access Past Papers<br/>with Ease
           </h2>
           <p className={styles.Para}>
             Explore a comprehensive collection of past papers for top subjects
@@ -31,4 +31,4 @@ function Layout() {
     </div>
   );
 }
-export default Layout;
+export default Home_1;

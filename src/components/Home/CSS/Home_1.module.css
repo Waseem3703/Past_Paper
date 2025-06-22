@@ -1,35 +1,55 @@
+/* ========== LAYOUT ========== */
 .Box_Layout {
   margin: 20px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Responsive wrap */
+  align-items: center;
 }
+
+/* Right Content (Text + Buttons) */
 .Right_Box {
   display: flex;
   flex-direction: column;
-  margin-left: 120px;
-  margin-top: 50px;
+  margin-left: 80px;
+  margin-top: 40px;
   margin-right: 20px;
+  max-width: 500px;
 }
+
+/* Left Content (Image) */
 .Left_Box {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
+
+/* ========== TYPOGRAPHY ========== */
 .h2_heading {
   font-size: 50px;
-  margin-bottom: 5px;
-  font-weight: 700px;
+  margin-bottom: 10px;
+  font-weight: 700; /* Removed px */
+  line-height: 1.2;
 }
 
-.home_img {
-  width: 500px;
-  height: 427px;
-  margin-right: 120px;
-}
-.Para{
+.Para {
   color: rgb(95, 99, 104);
   font-size: 18px;
-  font-weight: 400px;
+  font-weight: 400; /* Removed px */
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
+/* ========== IMAGE ========== */
+.home_img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* ========== PRIMARY BUTTON ========== */
 .Nav_Button {
   background-color: rgb(25, 103, 210);
   color: white;
@@ -38,27 +58,64 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 15px;
+  transition: background-color 0.2s ease;
 }
 
 .Nav_Button:hover {
-background-color: rgb(3, 64, 150);
-transition-duration: 200ms;
+  background-color: rgb(3, 64, 150);
 }
+
+/* ========== SECONDARY BUTTON ========== */
 .Nav_Button_Secondary {
   background-color: white;
   color: rgb(25, 103, 210);
   padding: 12px 20px;
   border: 2px solid rgb(217, 222, 230);
   border-radius: 4px;
-  margin-left: 20px;
   cursor: pointer;
   font-size: 15px;
+  margin-left: 20px;
   transition: all 0.2s ease-in-out;
-  margin-left: px;
 }
 
 .Nav_Button_Secondary:hover {
   background-color: rgb(230, 240, 255);
-  border: 2px solid rgb(25, 103, 210);
+  border-color: rgb(25, 103, 210);
+}
 
+/* ========== RESPONSIVE MEDIA QUERY ========== */
+@media (max-width: 768px) {
+  .Box_Layout {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .Right_Box {
+    margin: 20px 0;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .Left_Box {
+    margin-bottom: 20px;
+  }
+
+  .home_img {
+    margin-right: 0;
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .Nav_Button,
+  .Nav_Button_Secondary {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .Nav_Button_Secondary {
+    margin-left: 0;
+  }
 }
